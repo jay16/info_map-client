@@ -13,5 +13,6 @@ task :environment => "Gemfile.lock" do
   require "%s/config/boot.rb" % ENV["APP_ROOT_PATH"]
   load "%s/config/settings.rb" % ENV["APP_ROOT_PATH"]
 
+  @settings = Settings
 end
 Dir.glob('tasks/*.rake').each { |file| load file }
